@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISMAIL SHAH-Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">ISMAIL SHAH</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="home">
+        <div class="hero">
+            <h1>Welcome to My Portfolio</h1>
+            <p>I create stunning websites that drive results.</p>
+            <a href="#contact" class="cta-button">Hire Me</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hi, I'm [ISMAIL SHAH], a passionate web developer with expertise in HTML, CSS, JavaScript, and more.</p>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <h2>My Work</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="project 3 .jpg" alt="Project 1">
+                <div class="overlay">
+                    <h3>Project 1</h3>
+                    <button onclick="openModal('project1')">View Details</button>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="project 2 .jpg" alt="Project 2">
+                <div class="overlay">
+                    <h3>Project 2</h3>
+                    <button onclick="openModal('project2')">View Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2>Services</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Web Design</h3>
+                <p>Beautiful and user-friendly designs.</p>
+            </div>
+            <div class="service-card">
+                <h3>Web Development</h3>
+                <p>Fast, responsive, and scalable websites.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>What My Clients Say</h2>
+        <div class="testimonial-carousel">
+            <button class="prev-button">&#10094;</button>
+            <div class="testimonial-card active">
+                <p>"Amazing work! Highly recommended!"</p>
+                <h3>- Hasnain</h3>
+            </div>
+            <div class="testimonial-card">
+                <p>"Professional and creative. Great experience!"</p>
+                <h3>- Awais</h3>
+            </div>
+            <div class="testimonial-card">
+                <p>"Delivered beyond my expectations. Will hire again!"</p>
+                <h3>- Jamal</h3>
+            </div>
+            <button class="next-button">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Me</h2>
+        <form class="contact-form" onsubmit="validateForm(event)">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <small class="error-message" id="name-error"></small>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Your Email" required>
+                <small class="error-message" id="email-error"></small>
+            </div>
+            <div class="form-group">
+                <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                <small class="error-message" id="message-error"></small>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.twitter.com/"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        </div>
+        <p>&copy; 2025 ISMAIL SHAH. All rights reserved.</p>
+        <p>For more details :</p>
+        <p>Email on "ismailalishah2007@gmail.com"</p>
+    </footer>
+
+    <!-- Back-to-Top Button -->
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <!-- Modal for Portfolio Details -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title">Project Details</h2>
+            <p id="modal-description">Details about the project will go here.</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
